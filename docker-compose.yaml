@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  node_image_webifier:
+    container_name: node_image_webifier
+    build: .
+    ports:
+      - 3000:8080
+    volumes:
+      - .:/app
+#    command: adonis serve --dev
+    stdin_open: true
+    tty: true
